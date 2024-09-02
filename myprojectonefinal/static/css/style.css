@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: greenyellow;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    background-color: #007bff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #e0e0e0 !important;
+}
+
+.container {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    width: 300px; /* Fixed width for cards */
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold; /* Make titles bold */
+    color: #007bff;
+}
+
+.card-text {
+    display: block;  /* Ensure it is visible */
+    font-size: 1.1rem; /* Slightly smaller than titles for contrast */
+    color: #555;  /* Dark grey for readability */
+    line-height: 1.4; /* Improved line spacing for better readability */
+    margin-bottom: 10px; /* Space between text and buttons */
+}
+
+.btn-primary, .btn-secondary {
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+#cart-items .list-group-item {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#cart-items .list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#checkout-button {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#checkout-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Animation for smooth content display */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Existing styles */
+
+.product-details-hover {
+    display: none;  /* Hide details by default */
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+
+/* Show details on hover over the button */
+.card-body:hover .product-details-hover {
+    display: block;  /* Show details on hover */
+    opacity: 1;      /* Smooth appearance */
+}
+

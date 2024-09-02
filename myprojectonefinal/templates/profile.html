@@ -1,0 +1,40 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Profile Information</h2>
+        </div>
+        <div class="card-body">
+            <p class="mb-2">
+                <i class="fas fa-user"></i> <strong>Username:</strong> {{ user.username }}
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-envelope"></i> <strong>Email:</strong> {{ user.email }}
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-id-card"></i> <strong>First Name:</strong> {{ user.first_name }}
+            </p>
+            <p class="mb-2">
+                <i class="fas fa-id-card"></i> <strong>Last Name:</strong> {{ user.last_name }}
+            </p>
+
+            <!-- Add more fields as needed -->
+        </div>
+        <div class="card-footer text-center">
+            <a href="{% url 'index' %}" class="btn btn-outline-primary">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Include FontAwesome for icons (if not already included in your project) -->
+<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+/>
+
+{% endblock %}
